@@ -1,0 +1,48 @@
+/*
+ * Tokens visuais APROXIMADOS, medidos a olho nas capturas (JPEG) das telas do Figma.
+ * O arquivo .fig / Dev Mode (tokens exatos de cor, tipografia, espaçamento) não foi fornecido.
+ * Substituir por valores oficiais quando disponíveis.
+ */
+:root {
+  --accent: #5f0a72; /* roxo dos botões primários e barras de progresso */
+  --accent-soft: #e5dcfb; /* item ativo da Sidebar */
+  --accent-contrast: #ffffff;
+
+  --bg: #ffffff;
+  --panel: #e1e6f2; /* fundo azul-acinzentado dos painéis */
+  --card: #ffffff;
+  --card-muted: #eef0f8;
+  --border: #d4d8e4;
+  --text: #0e1124;
+  --muted: #6b7087;
+  --btn-dark: #000000; /* botões "Criar tarefa", "Fazer check-in" */
+  --btn-dark-text: #ffffff;
+
+  --ok: #1fb87a;
+  --ok-soft: #bff0d3;
+  --warn: #f5a623;
+  --danger: #e5484d;
+  --danger-soft: #ffe1e3;
+  --info: #2f80ed;
+  --track: #c9ccd6; /* trilho das barras de progresso */
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgb(15 18 40 / 0.06);
+  --sidebar-w: 240px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root[data-tema='escuro'] {
+  --bg: #11131d;
+  --panel: #1b1f31;
+  --card: #262b42;
+  --card-muted: #20243a;
+  --border: #353a55;
+  --text: #f1f2f8;
+  --muted: #a3a8c0;
+  --accent-soft: #3a2f63;
+  --track: #3d435f;
+  --btn-dark: #f1f2f8;
+  --btn-dark-text: #11131d;
+}

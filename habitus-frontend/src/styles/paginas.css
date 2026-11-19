@@ -1,0 +1,146 @@
+/* Estilos específicos de telas. Classes simples (sem CSS-in-JS) para manter o bundle pequeno. */
+.duas-colunas { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; align-items: start; }
+.tres-colunas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+.home-grid { display: grid; grid-template-columns: 1.1fr 1fr 1fr; gap: 16px; align-items: start; }
+.chip-lg { padding: 10px 24px; font-size: 15px; }
+.pos { display: inline-grid; place-items: center; width: 20px; height: 20px; border-radius: 4px; background: #dcdde4; font-size: 11px; font-weight: 600; }
+tr.destaque, .card.destaque, .card.highlight { background: #fdf3c4; color: #0e1124; }
+.badge { background: var(--danger); color: #fff; border-radius: 999px; padding: 1px 8px; font-size: 11px; }
+.ponto { width: 9px; height: 9px; border-radius: 50%; background: red; flex: none; }
+.ok-txt { color: var(--ok); }
+
+/* Tarefas */
+.tarefa { display: flex; gap: 14px; align-items: flex-start; list-style: none; }
+.tarefa-icone { width: 52px; height: 52px; border-radius: 10px; background: #d6efff; display: grid; place-items: center; flex: none; color: #0e1124; }
+.tarefa-home { display: flex; flex-direction: column; gap: 10px; list-style: none; }
+.tabela { width: 100%; border-collapse: collapse; font-size: 13px; }
+.tabela th { text-align: left; font-weight: 500; color: var(--muted); font-size: 11px; padding: 4px 6px; }
+.tabela td { padding: 6px; }
+.tabela tbody tr { border-radius: 6px; }
+.cal { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; font-size: 12px; background: var(--card); border-radius: 10px; padding: 12px; }
+.cal-titulo { grid-column: 1 / -1; font-weight: 600; text-transform: capitalize; margin-bottom: 4px; }
+.cal-dow { color: var(--muted); font-size: 10px; }
+.cal-dia { padding: 4px 0; border-radius: 6px; }
+.cal-dia.hoje { background: var(--accent); color: #fff; font-weight: 700; }
+
+/* Criar tarefa */
+.passo { background: var(--card); border: 0; border-radius: var(--radius-sm); padding: 14px 16px; margin: 0; }
+.passo legend { display: flex; align-items: center; gap: 10px; font-weight: 600; padding: 0; float: left; width: 100%; margin-bottom: 8px; flex-wrap: wrap; }
+.passo legend small { font-weight: 400; flex-basis: 100%; margin-left: 42px; margin-top: -8px; }
+.passo legend i { width: 30px; height: 30px; border-radius: 50%; background: #e3cdf0; display: grid; place-items: center; font-style: normal; flex: none; }
+.passo > :not(legend) { clear: both; }
+.cats { display: flex; gap: 8px; flex-wrap: wrap; clear: both; }
+.cat { display: flex; flex-direction: column; align-items: center; gap: 4px; min-width: 84px; padding: 10px 12px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; font-size: 12px; }
+.cat[aria-checked='true'] { border-color: var(--accent); background: #f4e8f8; color: #0e1124; }
+
+/* Detalhe da tarefa */
+.semana { display: flex; justify-content: space-between; gap: 6px; padding: 0; list-style: none; margin: 0; }
+.semana li { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 12px; }
+.semana .circulo, .jornada .circulo { width: 24px; height: 24px; border-radius: 50%; border: 2px solid var(--border); display: inline-block; }
+.semana small { color: var(--muted); font-size: 10px; }
+.historico { display: grid; grid-template-columns: 1.3fr 1fr auto; gap: 8px; align-items: center; font-size: 12px; }
+.citacao { background: #c9eef7; color: #0b4a5a; border-radius: 6px; padding: 8px 10px; font-size: 12px; display: flex; gap: 6px; align-items: center; }
+
+/* Guildas */
+.guildas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 14px; }
+.guilda-card { background: var(--card); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; text-align: center; color: #0e1124; }
+.guilda-card .capa { height: 78px; position: relative; }
+.guilda-card .emblema { position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%); width: 52px; height: 52px; border-radius: 8px; background: #fff; display: grid; place-items: center; box-shadow: var(--shadow); }
+.guilda-card .corpo { padding: 32px 10px 10px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.guilda-card .ver-detalhes { background: #000; color: #fff; border: 0; padding: 8px; font-weight: 600; }
+.niveis { display: flex; justify-content: space-between; list-style: none; padding: 14px 0 0; margin: 0; position: relative; }
+.niveis li { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; flex: 1; }
+.niveis li > span { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--track); color: #fff; font-size: 12px; }
+.niveis li > span.ok { background: var(--ok); }
+.niveis li > span.cur { background: var(--accent); }
+.mural-compacto { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.destaque-post { background: #f0dff4; border-radius: 6px; padding: 8px 10px; display: flex; flex-direction: column; font-size: 11px; color: #3d1670; }
+
+/* Desafios */
+.desafios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding: 0; list-style: none; margin: 8px 0 0; }
+.desafio-card { background: var(--card); border-radius: 8px; overflow: hidden; color: #0e1124; }
+.desafio-card .capa { height: 64px; display: flex; justify-content: flex-end; align-items: flex-start; padding: 6px; }
+.desafio-card .corpo { padding: 10px; }
+
+/* Ranking */
+.segmentado { display: inline-flex; background: var(--card); border-radius: 6px; overflow: hidden; }
+.segmentado button { border: 0; background: none; padding: 7px 18px; font-size: 12px; }
+.segmentado button[aria-selected='true'], .segmentado button[aria-checked='true'] { background: var(--accent); color: #fff; }
+.podio { display: flex; align-items: flex-end; justify-content: center; gap: 12px; margin-top: 10px; }
+.degrau { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 24px 0; border-radius: 6px 6px 0 0; min-width: 130px; }
+.degrau.p1 { background: #f4efc2; min-height: 150px; color: #0e1124; }
+.degrau.p2 { background: #d5d9e3; min-height: 120px; color: #0e1124; }
+.degrau.p3 { background: #f2dccf; min-height: 110px; color: #0e1124; }
+
+/* Perfil */
+.perfil-capa .capa { height: 200px; border-radius: var(--radius) var(--radius) 0 0; background: linear-gradient(120deg, #1c3d7a, #f59e6b 55%, #5fb88f) center / cover; display: flex; justify-content: flex-end; align-items: flex-start; padding: 12px; }
+.perfil-capa .identidade { background: var(--panel); border-radius: 0 0 var(--radius) var(--radius); padding: 0 24px 16px; display: flex; flex-direction: column; gap: 6px; }
+.avatar-grande { position: relative; margin-top: -60px; width: 120px; }
+.avatar-grande .avatar { border: 4px solid var(--panel); }
+.avatar-grande .mais { position: absolute; right: 4px; bottom: 4px; width: 24px; height: 24px; border-radius: 50%; border: 0; background: var(--muted); color: #fff; display: grid; place-items: center; }
+
+/* Conquistas */
+.cat-tile { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 92px; padding: 10px 4px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; font-size: 12px; color: #0e1124; }
+.cat-tile.sel { border-color: var(--accent); background: #f1e3f5; }
+.recente { background: #fdf0c9; border-radius: 10px; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; margin: 12px 0; color: #3b2a00; }
+.conquistas-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; padding: 0; list-style: none; margin: 0; }
+.conquista { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 10px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; color: #0e1124; font-size: 12px; }
+.conquista .selo { width: 58px; height: 58px; border-radius: 10px; background: #fde7c4; display: grid; place-items: center; }
+.conquista.bloqueada { background: #e4e4e8; filter: grayscale(1); }
+.conquista .xp { color: #d4a017; }
+.conquista .estado { width: 100%; border-radius: 4px; padding: 3px 0; font-weight: 600; font-size: 11px; }
+.conquista .estado.desbloqueada { background: var(--ok-soft); color: #0b6b3f; }
+.conquista .estado.em-progresso { background: #3a0a63; color: #fff; }
+.conquista .estado.bloqueada { background: #9a9aa6; color: #fff; }
+
+/* Progresso */
+.nivel-hero { background: linear-gradient(120deg, #5fb0e8, #f6c177 60%, #8ac38b); border-radius: var(--radius); padding: 22px; display: flex; align-items: center; gap: 22px; min-height: 170px; color: #10213a; }
+.nivel-hero > div { flex: 1; }
+.hex { width: 84px; height: 96px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: #1b6fe0; color: #fff; display: grid; place-items: center; font-size: 42px; font-weight: 800; flex: none; }
+.hex.cinza { background: #6b7280; width: 54px; height: 62px; font-size: 26px; }
+.hex.mini { width: 34px; height: 38px; font-size: 16px; background: #d97706; }
+.hex.mini.atual { background: #1b6fe0; }
+.hex.mini.cinza { background: #6b7280; }
+.jornada { display: grid; grid-template-columns: repeat(8, 1fr); gap: 8px; list-style: none; padding: 0; margin: 0; text-align: center; }
+.jornada li { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 12px; }
+.jornada small { font-size: 9px; color: var(--muted); }
+
+/* Loja */
+.loja-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 0; list-style: none; margin: 0; }
+.produto { display: flex; flex-direction: column; gap: 6px; background: var(--card-muted); }
+.produto .img { height: 70px; display: grid; place-items: center; color: var(--accent); }
+.como-funciona { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; list-style: none; padding: 0; margin: 0; text-align: center; }
+.como-funciona li { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 11px; }
+
+/* Notificações */
+.notifs { background: var(--panel); border-radius: var(--radius); padding: 6px; display: flex; flex-direction: column; gap: 2px; list-style: none; margin: 0; }
+.notif { display: flex; gap: 12px; align-items: center; padding: 10px 12px; background: var(--card); border-radius: 8px; }
+.notif.nao-lida { border-left: 3px solid var(--accent); }
+.notif-ico { width: 44px; height: 44px; border-radius: 8px; display: grid; place-items: center; background: var(--card-muted); flex: none; }
+
+/* Configurações */
+.cor { width: 22px; height: 22px; border-radius: 50%; border: 2px solid transparent; padding: 0; }
+.cor.sel { outline: 2px solid var(--text); outline-offset: 2px; }
+.resumo { display: grid; grid-template-columns: auto 1fr; gap: 6px 12px; margin: 0; font-size: 12px; }
+.resumo dt { color: var(--muted); } .resumo dd { margin: 0; text-align: right; }
+
+/* ---------- Responsividade (RNF01) ---------- */
+@media (max-width: 1200px) {
+  .home-grid { grid-template-columns: 1fr 1fr; }
+  .conquistas-grid { grid-template-columns: repeat(3, 1fr); }
+  .loja-grid { grid-template-columns: repeat(2, 1fr); }
+  .guildas-grid, .desafios-grid { grid-template-columns: repeat(2, 1fr); }
+  .tres-colunas { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 900px) {
+  .duas-colunas, .home-grid, .tres-colunas { grid-template-columns: 1fr !important; }
+  .jornada { grid-template-columns: repeat(4, 1fr); }
+  .banner { flex-wrap: wrap; }
+}
+@media (max-width: 600px) {
+  .guildas-grid, .desafios-grid, .loja-grid, .conquistas-grid, .mural-compacto { grid-template-columns: 1fr; }
+  .podio { gap: 4px; } .degrau { min-width: 90px; padding: 12px 8px 0; }
+  .tarefa { flex-direction: column; }
+  .stats-row { grid-template-columns: 1fr 1fr !important; }
+  table { display: block; overflow-x: auto; }
+}

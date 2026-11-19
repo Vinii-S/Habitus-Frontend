@@ -1,0 +1,86 @@
+/* ---------- Painéis e cartões ---------- */
+.panel { background: var(--panel); border-radius: var(--radius); padding: 18px; }
+.panel > .panel-title { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.panel-title h2, .panel-title h3 { font-weight: 500; }
+.card { background: var(--card); border-radius: var(--radius-sm); padding: 12px 14px; box-shadow: var(--shadow); }
+.banner { display: flex; align-items: center; gap: 18px; background: var(--panel); border-radius: var(--radius); padding: 18px 22px; }
+.banner-icon { width: 76px; height: 76px; border-radius: 10px; display: grid; place-items: center; background: var(--card-muted); flex: none; }
+.banner h1 { font-size: 26px; font-weight: 500; }
+
+/* ---------- Botões ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: var(--radius-sm); padding: 8px 16px; font-weight: 500; background: var(--card); transition: filter .15s; }
+.btn:hover:not(:disabled) { filter: brightness(0.95); }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn-dark { background: var(--btn-dark); color: var(--btn-dark-text); }
+.btn-primary { background: var(--accent); color: var(--accent-contrast); }
+.btn-soft { background: #f1e3f5; color: var(--accent); border-color: var(--accent); }
+.btn-outline { background: transparent; border-color: var(--border); }
+.btn-danger { background: var(--danger-soft); color: var(--danger); }
+.btn-sm { padding: 5px 10px; font-size: 12px; }
+.btn-lg { padding: 12px 22px; font-size: 16px; }
+.btn-block { width: 100%; }
+
+/* ---------- Chips / abas / tags ---------- */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { border: 0; border-radius: 999px; padding: 6px 16px; background: var(--card); font-size: 13px; }
+.chip[aria-selected='true'], .chip.active { background: var(--info); color: #fff; }
+.chips.purple .chip[aria-selected='true'] { background: var(--accent); }
+.tag { display: inline-block; border-radius: 999px; padding: 2px 10px; font-size: 11px; font-weight: 500; background: #d8e4ff; }
+.tag.ok { background: var(--ok-soft); color: #0b6b3f; }
+.tag.pink { background: #fbd3ef; color: #8a1670; }
+.tag.grey { background: #dcdde4; color: #555; }
+.tag.purple { background: #e6d6ff; color: #4d1d94; }
+.tag.cyan { background: #bff0f5; color: #0b6770; }
+.tag.xp { background: #ece0ff; color: #3b1c80; }
+
+/* ---------- Progresso ---------- */
+.progress { height: 12px; border-radius: 999px; background: var(--track); overflow: hidden; }
+.progress > span { display: block; height: 100%; background: var(--accent); border-radius: inherit; transition: width .4s; }
+.progress.thin { height: 7px; }
+.progress.dark { background: #000; }
+.progress.dark > span { background: var(--accent); }
+
+/* ---------- Estatísticas ---------- */
+.stat { display: flex; align-items: center; gap: 12px; background: var(--card); border-radius: var(--radius-sm); padding: 12px 14px; }
+.stat-icon { width: 44px; height: 44px; border-radius: 10px; display: grid; place-items: center; flex: none; }
+.stat strong { display: block; font-size: 20px; font-weight: 600; }
+.stat span { font-size: 12px; color: var(--muted); }
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+
+/* ---------- Avatar ---------- */
+.avatar { border-radius: 50%; background: var(--card-muted); display: grid; place-items: center; overflow: hidden; flex: none; color: var(--muted); border: 1px solid var(--border); }
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ---------- Formulários ---------- */
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field > label, .field > .label { font-weight: 500; font-size: 13px; }
+.input { display: flex; align-items: center; gap: 10px; background: #fff; color: #0e1124; border: 1px solid var(--border); border-radius: 10px; padding: 0 12px; min-height: 44px; }
+.input input, .input select, .input textarea { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; padding: 10px 0; }
+.input:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 25%, transparent); }
+.input svg { color: var(--muted); flex: none; }
+.field-error { color: var(--danger); font-size: 12px; }
+.alert { border-radius: var(--radius-sm); padding: 10px 14px; background: var(--danger-soft); color: #8c1d22; font-size: 13px; }
+.alert.ok { background: var(--ok-soft); color: #0b6b3f; }
+
+/* ---------- Toggle ---------- */
+.toggle { position: relative; width: 38px; height: 22px; border-radius: 999px; border: 0; background: var(--track); flex: none; padding: 0; }
+.toggle::after { content: ''; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; transition: transform .15s; }
+.toggle[aria-checked='true'] { background: var(--accent); }
+.toggle[aria-checked='true']::after { transform: translateX(16px); }
+
+/* ---------- Diálogo ---------- */
+.overlay { position: fixed; inset: 0; background: rgb(10 12 30 / .55); display: grid; place-items: center; z-index: 50; padding: 16px; }
+.dialog { background: var(--card); border-radius: var(--radius); padding: 22px; width: min(480px, 100%); display: flex; flex-direction: column; gap: 14px; }
+
+/* ---------- Skeleton / estados ---------- */
+.skeleton { background: linear-gradient(90deg, var(--card-muted), var(--card), var(--card-muted)); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: var(--radius-sm); min-height: 18px; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+.state { text-align: center; padding: 32px 16px; color: var(--muted); }
+
+/* ---------- RNF09: feedback visual de XP / nível ---------- */
+.rewards { position: fixed; right: 20px; bottom: 20px; display: flex; flex-direction: column; gap: 10px; z-index: 60; pointer-events: none; }
+.reward { display: flex; align-items: center; gap: 10px; background: var(--accent); color: #fff; border-radius: 12px; padding: 12px 18px; font-weight: 600; box-shadow: 0 6px 20px rgb(0 0 0 / .25); animation: reward-in .35s ease-out, reward-out .35s ease-in 3.2s forwards; }
+.reward.nivel { background: #f5a623; color: #1d1300; }
+@keyframes reward-in { from { transform: translateY(24px) scale(.9); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes reward-out { to { transform: translateY(-8px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .reward { animation: none; } }
